@@ -1,0 +1,11 @@
+﻿# Build output
+**/target/
+**/build/
+
+# IntelliJ user workspace state
+**/.idea/workspace.xml
+
+# Local environment variables
+.env
+.env.*
+!.env.example
