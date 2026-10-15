@@ -4,14 +4,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import lombok.Getter;
-import lombok.Setter;
 import java.util.Date;
 
 @Entity
 @Table(name = "clientes")
-@Getter
-@Setter
 public class Cliente {
 
     @Id
@@ -44,4 +40,19 @@ public class Cliente {
     public void prePersist() {
         createAt = new Date();
     }
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+    public String getApellido() { return apellido; }
+    public void setApellido(String apellido) { this.apellido = apellido; }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+    public Date getCreateAt() { return createAt; }
+    public void setCreateAt(Date createAt) { this.createAt = createAt; }
+    public String getFoto() { return foto; }
+    public void setFoto(String foto) { this.foto = foto; }
+    public Region getRegion() { return region; }
+    public void setRegion(Region region) { this.region = region; }
 }
